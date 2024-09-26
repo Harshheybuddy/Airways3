@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./styles.module.css"
 
-import { Link } from 'react-router-dom'
 import Modal from '../contactModal/Modal'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const list1 = [
@@ -43,9 +43,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  const navigate = useNavigate();
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   }
+
+  
+  const goToSection = () => {
+    navigate('/#bookNow'); // Navigates to About page's section
+  };
 
   return (
     <div className={`${styles.container} ${visible ? styles.visible : styles.hidden}`}>
@@ -92,7 +99,7 @@ const Navbar = () => {
           <div className={styles.subtext}>ABOUT US</div>
         </Link>
         <div className={styles.subtext} onClick={() => setModal(!modal)}>CONTACT</div>
-        <div className={styles.subtext}>BOOK NOW</div>
+        <div className={styles.subtext} onClick={goToSection}>BOOK NOW</div>
       </div>
 
       <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
