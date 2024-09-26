@@ -32,9 +32,9 @@ const Home = () => {
         <div className='w-[85%] mx-auto pt-[5rem] lg:pt-[10rem] pb-[0rem] lg:pb-[5rem]'>
             <Section5/>
         </div>
-        <div className='w-[85%] mx-auto pt-[5rem] lg:pt-[10rem] pb-[0rem] lg:pb-[5rem]'>
+{/*         <div className='w-[85%] mx-auto pt-[5rem] lg:pt-[10rem] pb-[0rem] lg:pb-[5rem]'>
             <Section6/>
-        </div>
+        </div> */}
         {/* <div className='w-[80%] mx-auto pt-[10rem] pb-[0rem] lg:pb-[5rem]'>
             <Section7/>
         </div> */}
