@@ -51,7 +51,7 @@ const Navbar = () => {
 
   
   const goToSection = () => {
-    navigate('/#bookNow'); // Navigates to About page's section
+    navigate('/#bookNow'); 
   };
 
   return (
